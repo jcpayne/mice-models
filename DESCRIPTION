@@ -20,7 +20,8 @@ LazyData: true
 Imports:
   methods
 Depends:
-  ggplot2
+  ggplot2,
+  beepr
 RoxygenNote: 5.0.1
 Collate:
     'MICE_object_model.R'

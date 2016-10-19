@@ -7,15 +7,26 @@
 runMICE(Params, inputdir, scenario = "base", nYears = 100, nSteps = 4)
 }
 \arguments{
+\item{inputdir}{A directory where the input_params.csv and diet_prefs.csv files are.}
+
+\item{scenario}{Character.  A scenario name (must match a column name in the input file.)}
+
+\item{nYears}{Integer.  Number of years for the simulation.}
+
+\item{nSteps}{Integer.  Number of timesteps within a year (ignored by some species).}
+
 \item{params}{A data frame of parameters}
 }
 \value{
-A list with three components: $input, $data, and $plots.  The $input
-  list contains the simulationParams object that was used to do the
-  simulations.  The $data and $plots sub-lists both have named components for
-  each species, so for example the plots for Anchovy can be accessed as
-  <result>$plots$Anchovy, or the data frame with the numerical results for
-  Anchovy can be accessed with <result>$data$Anchovy.
+A list with several components:
+ $input_params: the simulationParams object that was used to make the run.
+ $Anchovy: anchovy results.  This has two components:
+    $data: a data frame of some of the most commonly-used results
+    $plots: a set of plots, which may be accessed as a group or individually
+ $Sardine (same as Anchovy), etc.
+ $species.  The species objects that contain all values used.
+    $Anchovy: the anchovy object
+    $Sardine: the sardine object, etc.
 }
 \description{
 This function drives the model.  It creates and initializes objects by
@@ -47,8 +58,11 @@ catch (because catch and recruitment may depend on population size).
  result<-runMICE(my_params) #uses a modified simulationParams object
 
  #Look at the results
- result$plots$Pelican #plot pelican data (several plots are produced)
- anchovy.df<-result$data$Anchovy #save the Anchovy data to a data frame for further analysis
+ result$Pelican$plots #Show Pelican plots
+ anchovy.df<-result$Anchovy$data #save the Anchovy data to a data frame for further analysis
+
+ #Look at a slot in one of the Species objects
+ res$species$Anchovy@wv #weight at age
 }
 }
 
