@@ -1,0 +1,201 @@
+species,param_type,param_list,parameter,index,base,scenario_2,description,source
+Anchovy,scalar,,P,,6,,Age plus group,Punt et al 2016 Supplement Table A3
+Anchovy,scalar,,am,,1,,Age at maturity,Punt et al 2016 Supplement Table A3
+Anchovy,age,,Ninit,0,318999015.5,,Initial numbers-at-age,Punt et al Fortran code and input files
+Anchovy,age,,Ninit,1,103047290.8,,,Punt et al Fortran code and input files
+Anchovy,age,,Ninit,2,33287701.9,,,Punt et al Fortran code and input files
+Anchovy,age,,Ninit,3,10753034.74,,,Punt et al Fortran code and input files
+Anchovy,age,,Ninit,4,3473587.83,,,Punt et al Fortran code and input files
+Anchovy,age,,Ninit,5,1122084.388,,,Punt et al Fortran code and input files
+Anchovy,age,,Ninit,6,535433.3537,,,Punt et al Fortran code and input files
+Anchovy,age,,wv,0,0.001223755,,Weight at age,Punt et al Fortran code and input files
+Anchovy,age,,wv,1,0.008320171,,,Punt et al Fortran code and input files
+Anchovy,age,,wv,2,0.017705921,,,Punt et al Fortran code and input files
+Anchovy,age,,wv,3,0.025988804,,,Punt et al Fortran code and input files
+Anchovy,age,,wv,4,0.032190792,,,Punt et al Fortran code and input files
+Anchovy,age,,wv,5,0.036470776,,,Punt et al Fortran code and input files
+Anchovy,age,,wv,6,0.039295564,,,Punt et al Fortran code and input files
+Anchovy,scalar,,M,,1.13,,Natural mortality,Punt et al 2016 Supplement Table A3
+Anchovy,scalar,availability,ap,,1,,Controls the ratio: maximum available biomass/total biomass,"guess, but SEE Punt et al Supplement Fig A6"
+Anchovy,scalar,availability,ac,,10000000,,"Maximum available biomass.  If set very high, will not limit available biomass.",guess
+Anchovy,scalar,recruitment,P_fail,,0.224,,Probability that recruitment fails,Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,sardine_effect,,1,,"If sardine_effect=1, use different parameters depending on sardine biomass",
+Anchovy,scalar,recruitment,sardine_thresh,,500000,,Biomass of sardine that determines which set of anchovy recruitment parameters are used,Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,alpha,,1145.13124,,Ricker alpha (same as alpha1 and alpha2),guess
+Anchovy,scalar,recruitment,beta,,0.00156645,,Ricker beta (average of alpha1 and alpha2),guess
+Anchovy,scalar,recruitment,alpha1,,1145.13124,,Ricker  alpha for sardine biomass < Sardine_thresh,Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,beta1,,0.0007832,,Ricker  beta for sardine biomass < Sardine_thresh,Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,alpha2,,1145.13124,,Ricker  alpha for sardine biomass > Sardine_thresh,Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,beta2,,0.0023497,,Ricker  beta for sardine biomass > Sardine_thresh,Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,gamma,,0,,"Environmental driver coefficient; mean=0, range=-1 to 1 roughly.",Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,R_stochastic,,0,,"Flag: if R_stochastic =1, then add error to recruitment.  0=deterministic.",Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,resample_residuals,,0,,Should residuals be resampled from a vector of input values?,
+Anchovy,scalar,recruitment,epsilon_baseyear,,0.1,,Recruitment residual (log scale) in year 1,
+Anchovy,scalar,recruitment,sigma,,0.81,,Standard deviation of log SR residuals,Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,rho,,0,,Autocorrelation coefficient for log recruitment errors,Punt et al Fortran code and input files
+Anchovy,scalar,recruitment,R_thresh,,1,,Recruitment threshold (R=0 if Nmature < R_thresh),
+Sardine,scalar,,P,,15,,Age plus group,Punt et al 2016 Supplement Table A3
+Sardine,scalar,,am,,2,,Age at maturity,Punt et al 2016 Supplement Table A3
+Sardine,age,,Ninit,0,9970800,,Initial numbers-at-age,Punt et al Fortran code and input files
+Sardine,age,,Ninit,1,1032190,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,2,784295,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,3,1868970,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,4,518380,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,5,610221,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,6,280735,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,7,498016,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,8,147327,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,9,257218,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,10,8751.77,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,11,15847.6,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,12,4834.34,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,13,3966.09,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,14,11113.8,,,Punt et al Fortran code and input files
+Sardine,age,,Ninit,15,16191.3,,,Punt et al Fortran code and input files
+Sardine,age,,wv,0,0.0015,,Weight at age (kg),Punt et al Fortran code and input files
+Sardine,age,,wv,1,0.067,,,Punt et al Fortran code and input files
+Sardine,age,,wv,2,0.13,,,Punt et al Fortran code and input files
+Sardine,age,,wv,3,0.163,,,Punt et al Fortran code and input files
+Sardine,age,,wv,4,0.178,,,Punt et al Fortran code and input files
+Sardine,age,,wv,5,0.184,,,Punt et al Fortran code and input files
+Sardine,age,,wv,6,0.187,,,Punt et al Fortran code and input files
+Sardine,age,,wv,7,0.188,,,Punt et al Fortran code and input files
+Sardine,age,,wv,8,0.188,,,Punt et al Fortran code and input files
+Sardine,age,,wv,9,0.188,,,Punt et al Fortran code and input files
+Sardine,age,,wv,10,0.188,,,Punt et al Fortran code and input files
+Sardine,age,,wv,11,0.188,,,Punt et al Fortran code and input files
+Sardine,age,,wv,12,0.188,,,Punt et al Fortran code and input files
+Sardine,age,,wv,13,0.188,,,Punt et al Fortran code and input files
+Sardine,age,,wv,14,0.188,,,Punt et al Fortran code and input files
+Sardine,age,,wv,15,0.188,,,Punt et al Fortran code and input files
+Sardine,timestep,,gv,1,1,,Proportion of fishing per period,
+Sardine,timestep,,gv,2,0,,,
+Sardine,timestep,,gv,3,0,,,
+Sardine,timestep,,gv,4,0,,,
+Sardine,scalar,,fished,,1,,,
+Sardine,scalar,,F_baseline,,0.29,,Baseline fishing mortality rate.  May be modified by the fishing rule,Punt et al Fortran code and input files
+Sardine,scalar,fishing_rule,Bmin,,1000000,,"Fishing threshold: when Bt < Bmin, fishing mortality = 0",
+Sardine,scalar,fishing_rule,alpha,,0,,Slope of relationship of Nt to F,
+Sardine,age,,Sv,0,0.5,,Fishing selectivity at age,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,1,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,2,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,3,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,4,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,5,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,6,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,7,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,8,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,9,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,10,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,11,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,12,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,13,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,14,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,age,,Sv,15,1,,,Punt et al 2016 Exploring the implications of the harvest control rule
+Sardine,scalar,,M,,0.4,,Natural mortality,Punt et al 2016 Supplement Table A3
+Sardine,scalar,availability,ap,,1,,Controls the ratio: maximum available biomass/total biomass,"guess, but SEE Punt et al Supplement Fig A6"
+Sardine,scalar,availability,ac,,10000000,,"Maximum available biomass.  If set very high, will not limit available biomass.",guess
+Sardine,scalar,recruitment,alpha,,19.32240783,,Ricker alpha,Punt et al Fortran code and input files
+Sardine,scalar,recruitment,beta,,0.001186,,Ricker beta,Punt et al Fortran code and input files
+Sardine,scalar,recruitment,gamma,,0,,"Environmental driver coefficient; mean=0, range=-1 to 1 roughly.",Punt et al Fortran code and input files
+Sardine,scalar,recruitment,R_stochastic,,0,,"Flag: if R_stochastic =1, then add error to recruitment.  0=deterministic.",Punt et al Fortran code and input files
+Sardine,scalar,recruitment,resample_residuals,,0,,Should residuals be resampled from a vector of input values?,
+Sardine,scalar,recruitment,epsilon_baseyear,,0.1,,Recruitment residual (log scale) in year 1,
+Sardine,scalar,recruitment,sigma,,0.752,,Standard deviation of log SR residuals,Punt et al Fortran code and input files
+Sardine,scalar,recruitment,rho,,0,,Autocorrelation coefficient for log recruitment residuals,Punt et al Fortran code and input files
+Sardine,scalar,recruitment,R_thresh,,1,,Recruitment threshold (R=0 when number mature < R_thresh),
+Other_forage,scalar,,P,,5,,Age plus group,Punt et al 2016 Exploring the implications of the harvest control rule
+Other_forage,scalar,,am,,1,,Age at maturity,Punt et al Fortran code and input files
+Other_forage,age,,Ninit,0,10000,,Initial numbers-at-age,Punt et al Fortran code and input files
+Other_forage,age,,Ninit,1,10000,,,Punt et al Fortran code and input files
+Other_forage,age,,Ninit,2,10000,,,Punt et al Fortran code and input files
+Other_forage,age,,Ninit,3,10000,,,Punt et al Fortran code and input files
+Other_forage,age,,Ninit,4,10000,,,Punt et al Fortran code and input files
+Other_forage,age,,Ninit,5,10000,,,Punt et al Fortran code and input files
+Other_forage,scalar,,M,,0.6,,Natural mortality,Punt et al 2016 Supplement Table A3
+Other_forage,age,,wv,0,0.015,,Weight at age (kg),Punt et al Fortran code and input files
+Other_forage,age,,wv,1,0.067,,,Punt et al Fortran code and input files
+Other_forage,age,,wv,2,0.13,,,Punt et al Fortran code and input files
+Other_forage,age,,wv,3,0.163,,,Punt et al Fortran code and input files
+Other_forage,age,,wv,4,0.178,,,Punt et al Fortran code and input files
+Other_forage,age,,wv,5,0.184,,,Punt et al Fortran code and input files
+Other_forage,scalar,recruitment,R_stochastic,,1,,"Flag: if R_stochastic =1, then add error to recruitment.  0=deterministic.",
+Other_forage,scalar,recruitment,rho,,0,0.707,Autocorrelation coefficient (for y-1),Punt et al 2016 Exploring the implications of the harvest control rule
+Other_forage,scalar,recruitment,sigma,,0.7,,Standard deviation of log SR residuals,Punt et al 2016 Exploring the implications of the harvest control rule
+Other_forage,scalar,recruitment,epsilon_baseyear,,0.1,,Recruitment residual (log scale) in year 1,
+Other_forage,scalar,recruitment,R_thresh,,1,,Recruitment threshold (R=0 when number mature < R_thresh),
+Other_forage,scalar,availability,ap,,1,,Controls the ratio: maximum available biomass/total biomass,"guess, but SEE Punt et al Supplement Fig A6"
+Other_forage,scalar,availability,ac,,100000,,"Maximum available biomass.  If set very high, will not limit available biomass.",guess
+Sealion,scalar,,P,,15,,Age plus group,Punt et al Fortran code and input files
+Sealion,scalar,,am,,4,,Age at maturity,Punt et al 2016 Supplement Table A4
+Sealion,scalar,,M,,0.223143551,,Natural mortality,Derived from Punt et al 2016 survival=8 for 1+ animals
+Sealion,scalar,,R_baseyear,,100,,Base year reproduction,
+Sealion,scalar,prey_effect,k,,20,,Sensitivity of recruitment to prey. Controls how quickly max offspring rises with prey availability.  k >= 0.1 is knife-edge.,
+Sealion,scalar,prey_effect,Dhat,,0.2,,Controls the inflection point for the max offspring curve.  Should be in Prey biomass units.,
+Sealion,scalar,,Mo,,2,,Maximum offspring per predator,
+Sealion,scalar,recruitment,BHp,,1.08,,Beverton-Holt Maximum rate of increase,Punt et al 2016 Supplement Table A4 lambda max
+Sealion,scalar,recruitment,BHc,,100,,Beverton-Holt carrying capacity,guess
+Sealion,scalar,recruitment,R_thresh,,2,,Recruitment threshold (R=0 when number mature < R_thresh),
+Sealion,scalar,recruitment,R_stochastic,,1,,"Flag: if R_stochastic =1, then add error to recruitment.  0=deterministic.",
+Sealion,scalar,recruitment,rho,,0,,Autocorrelation coefficient (for y-1),Punt et al 2016 Exploring the implications of the harvest control rule
+Sealion,scalar,recruitment,sigma,,0.1,,Standard deviation of log SR residuals,Punt et al 2016 Exploring the implications of the harvest control rule
+Sealion,scalar,recruitment,epsilon_baseyear,,0.1,,Recruitment residual (log scale) in year 1,
+Pelican,scalar,,P,,15,,Age plus group,Punt et al 2016 Supplement Table A4
+Pelican,scalar,,am,,4,,Age at maturity,Punt et al 2016 Supplement Table A4
+Pelican,scalar,,M,,0.223143551,,Natural mortality,Derived from Punt et al 2016 survival=8 for 1+ animals
+Pelican,scalar,,R_baseyear,,100,,Base year reproduction,
+Pelican,scalar,prey_effect,k,,20,,Sensitivity of recruitment to prey. Controls how quickly max offspring rises with prey availability.  k >= 0.1 is knife-edge.,
+Pelican,scalar,prey_effect,Dhat,,0.2,,Controls the inflection point for the max offspring curve.  Should be in Prey biomass units.,
+Pelican,scalar,,Mo,,3,,Maximum offspring per predator,
+Pelican,scalar,recruitment,BHp,,1.08,,Beverton-Holt Maximum rate of increase,Punt et al 2016 Supplement Table A4 lambda max
+Pelican,scalar,recruitment,BHc,,100,,Beverton-Holt carrying capacity,guess
+Pelican,scalar,recruitment,R_thresh,,2,,Recruitment threshold (R=0 when number mature < R_thresh),
+Pelican,scalar,recruitment,R_stochastic,,1,,"Flag: if R_stochastic =1, then add error to recruitment.  0=deterministic.",
+Pelican,scalar,recruitment,rho,,0,,Autocorrelation coefficient (for y-1),Punt et al 2016 Exploring the implications of the harvest control rule
+Pelican,scalar,recruitment,sigma,,0.1,,Standard deviation of log SR residuals,Punt et al 2016 Exploring the implications of the harvest control rule
+Pelican,scalar,recruitment,epsilon_baseyear,,0.1,,Recruitment residual (log scale) in year 1,
+Sardine,residual,,observed_SR_err,1,1.130179,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,2,-1.560023,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,3,-3.904618,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,4,2.345358,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,5,-1.047859,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,6,-0.07381831,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,7,0.04209131,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,8,-1.19354,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,9,-0.7590794,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,10,-0.1065625,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,11,-1.17598,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,12,-0.1964866,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,13,-0.2909648,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,14,0.1228664,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,15,-0.5560936,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,16,-2.479774,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,17,0.2245572,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,18,-2.148514,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,19,-0.3410365,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,20,-0.1756472,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,21,-3.560827,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,22,-0.891888,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,23,-1.878452,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,24,-0.6451933,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,25,-2.478021,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,26,0.2347934,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,27,-2.642164,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,28,-2.179921,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Sardine,residual,,observed_SR_err,29,-1.787104,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,1,-1.505953,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,2,-0.3534996,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,3,0.1128377,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,4,-0.271121,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,5,-0.1140884,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,6,-0.08762817,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,7,-2.025329,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,8,0.5303406,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,9,0.006809879,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,10,0.1860918,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,11,-1.057225,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,12,-1.609937,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,13,-1.702491,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,14,0.2144275,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,15,0.9717022,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
+Anchovy,residual,,observed_SR_err,16,0.8932256,,Observed recruitment residual (ln scale) for resampling,Punt et al Fortran code and input files
