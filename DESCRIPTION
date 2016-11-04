@@ -21,6 +21,8 @@ Imports:
   methods
 Depends:
   ggplot2,
+  grid,
+  gridExtra,
   beepr
 RoxygenNote: 5.0.1
 Collate:

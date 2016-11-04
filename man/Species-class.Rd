@@ -63,5 +63,7 @@ it easier to swap models later.
 \item{\code{lnSR_err}}{numeric. Stock-recruitment errors (ln scale) by time; a vector.}
 
 \item{\code{recruitment}}{list. Parameters used in recruitment model (may vary by species).}
+
+\item{\code{R_error}}{list. Parameters that control stochastic recruitment error.}
 }}
 
