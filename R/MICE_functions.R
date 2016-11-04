@@ -307,11 +307,11 @@ calc_B1P<-function(Nv,wv){
 #' @family recruitment
 #' @keywords internal
 calc_R_error<-function(Species){
-  sigma<-Species@recruitment$sigma
-  rho<-Species@recruitment$rho
+  sigma<-Species@R_error$sigma
+  rho<-Species@R_error$rho
   epsilon<-Species@lnSR_err
 
-  epsilon[1]<-Species@recruitment$epsilon_baseyear
+  epsilon[1]<-Species@R_error$epsilon_baseyear
   for(t in 2:length(epsilon)){
     epsR<-rnorm(1,mean=0,sd=1) * sigma
     epsilon[t]<-rho * epsilon[t-1] + sqrt((1-rho)^2) * epsR
@@ -351,7 +351,7 @@ calc_preyRecruits<-function(Prey,preylist,ts,y){
   #browser()
   useG<-Prey@recruitment$useG
   G<-Prey@G
-  sigma2<-(Prey@recruitment$sigma)^2
+  sigma2<-(Prey@R_error$sigma)^2
   R_thresh<-Prey@recruitment$R_thresh
 
   #Calculate spawning biomass
@@ -391,11 +391,11 @@ calc_preyRecruits<-function(Prey,preylist,ts,y){
     #Draw a spawner-recruit residual
     #epsilon will equal 0 if R_stochastic is false, and may be autocorrelated depending on the value of rho
     #(see calc_R_error, which is called at initialization).
-    if(Prey@recruitment$R_stochastic){
+    if(Prey@R_error$R_stochastic){
       epsilon<-Prey@lnSR_err[t]
 
       #Overwrite it for anchovy if resample_residuals=T
-      if(is(Prey,"Anchovy") && Prey@recruitment$resample_residuals){
+      if(is(Prey,"Anchovy") && Prey@R_error$resample_residuals){
         #Resample recruitment errors from values that were read in (2 series, depending on value of SSB)
         if(B_sp <= 500){
           epsilon<-sample(Prey@R_residuals$SSB_LE_500K,1, replace=T)
@@ -415,10 +415,10 @@ calc_preyRecruits<-function(Prey,preylist,ts,y){
 
     #For anchovy (and possibly other prey), we force recruitment to fail a certain
     #percentage of the time regardless of all of the above calculations.
-    if(exists('p_fail',where=Prey@recruitment)){
-      p_fail<-Prey@recruitment$p_fail
+    if(exists('p_fail',where=Prey@R_error)){
+      p_fail<-Prey@R_error$p_fail
       if(p_fail != 0){
-          if(Prey@recruitment$R_stochastic){
+          if(Prey@R_error$R_stochastic){
             rnd<-runif(1) #draw a random uniform[0,1]
             if(rnd < p_fail){
               R<-0
@@ -472,7 +472,7 @@ calc_Ricker<-function(alpha,beta,B_sp){
 #' @family recruitment
 calc_other_R<-function(Other,y){
   epsilon<-Other@lnSR_err[y] #may be autocorrelated, depending on the value of rho
-  sigma<-Other@recruitment$sigma
+  sigma<-Other@R_error$sigma
   useG<-Other@recruitment$useG
   G<-Other@G
 
@@ -485,7 +485,7 @@ calc_other_R<-function(Other,y){
     R_oth<-R_oth * exp(G[y])
   }
   #Add stochastic error if R_stochastic is true
-  if(Other@recruitment$R_stochastic){
+  if(Other@R_error$R_stochastic){
     R_oth<-R_oth * exp(epsilon -((sigma^2)/2)) #This year's recruitment
   }
   Other@Nmat[1,y]<-R_oth
@@ -747,8 +747,8 @@ calc_predatorRecruits<-function(Predator,preylist,y,ts,nSteps){
     R<-calc_Bev_Holt(Nm,BHp,BHc)
 
     #Add recruitment error, if R_stochastic is true
-    if(Predator@recruitment$R_stochastic){
-      sigma2<-(Predator@recruitment$sigma)^2
+    if(Predator@R_error$R_stochastic){
+      sigma2<-(Predator@R_error$sigma)^2
       epsilon<-Predator@lnSR_err[t]
       R<-R * exp(epsilon - sigma2/2)
     }
@@ -796,7 +796,7 @@ calc_predatorRecruits<-function(Predator,preylist,y,ts,nSteps){
 #' @keywords internal
 calc_Ft<-function(Species,y,ts,t){
   Mv<-Species@Mv
-  Ft<-Species@F_baseline
+  Ft<-Species@fishing_rule$F_baseline
   gv<-Species@gv #proportion fished per time period
   Bmin<-Species@fishing_rule$Bmin #Minimum biomass of age 1+ fish, below which fishing is stopped.
   max_catch<-Species@fishing_rule$max_catch
@@ -839,7 +839,7 @@ calc_Ft<-function(Species,y,ts,t){
 calc_Fy<-function(Species,y){
 
   #Set fishing mortality at baseline (default)
-  Fy<-Species@F_baseline
+  Fy<-Species@fishing_rule$F_baseline
   Bmin<-Species@fishing_rule$Bmin_cutoff #Minimum biomass of age 1+ fish, below which fishing is stopped.
   max_catch<-Species@fishing_rule$max_catch
   Sv<-Species@Sv

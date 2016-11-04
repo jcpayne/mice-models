@@ -72,7 +72,7 @@ Sardine,timestep,,gv,1,1,,Proportion of fishing per period,
 Sardine,timestep,,gv,2,0,,,
 Sardine,timestep,,gv,3,0,,,
 Sardine,timestep,,gv,4,0,,,
-Sardine,scalar,,fished,,1,,,
+Sardine,scalar,,fished,,0,,,
 Sardine,scalar,,F_baseline,,0.29,,Baseline fishing mortality rate.  May be modified by the fishing rule,Punt et al Fortran code and input files
 Sardine,scalar,fishing_rule,Bmin,,1000000,,"Fishing threshold: when Bt < Bmin, fishing mortality = 0",
 Sardine,scalar,fishing_rule,alpha,,0,,Slope of relationship of Nt to F,

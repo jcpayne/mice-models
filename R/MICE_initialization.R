@@ -480,9 +480,9 @@ initialize_N<-function(Species,simulationParams,preynames){
   #Generate the recruitment residuals vector (epsilon) for species that have stochastic recruitment error,
   #by random draws from a distribution.  epsilon is a vector nYears or (nSteps x nYears) long.
   #Note: we have to calculate anchovy recruitment error on the fly later, because it depends on R.
-  if(Species@recruitment$R_stochastic){
-    tmp<-Species@recruitment
-    if((!exists('resample_residuals',where=tmp)) || (Species@recruitment$resample_residuals==0)){
+  if(Species@R_error$R_stochastic){
+    tmp<-Species@R_error
+    if((!exists('resample_residuals',where=tmp)) || (Species@R_error$resample_residuals==0)){
       Species<-calc_R_error(Species)
     }
   }#if(R_stochastic)
@@ -629,7 +629,7 @@ calc_G<-function(Species,simParams){
         }
         if(is(Species,"Other_forage")){
           period<-100 #the sample function doesn't work as expected for a single number
-          sigma<-Species@recruitment$sigma #not certain this is the right parameter -- see CalcG in Punt code
+          sigma<-Species@R_error$sigma #not certain this is the right parameter -- see CalcG in Punt code
           for(y in year:as.integer(min(nYears,year + period - 1))){
             GG[y]<-(height -.72)/1.72 * sigma - sigma^2/2
           }#for y in period

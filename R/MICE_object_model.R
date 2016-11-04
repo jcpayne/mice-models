@@ -71,6 +71,7 @@ setClass("simulationParams",
 #' @slot R numeric. Recruitment by year; a vector.
 #' @slot lnSR_err numeric. Stock-recruitment errors (ln scale) by time; a vector.
 #' @slot recruitment list. Parameters used in recruitment model (may vary by species).
+#' @slot R_error list. Parameters that control stochastic recruitment error.
 #'
 #' @return Should not be instantiated; rather, instantiate the child classes.
 #' @export
@@ -97,7 +98,8 @@ setClass("Species",
     R_baseyear = "numeric",
     R = "numeric",
     lnSR_err = "numeric",
-    recruitment = "list"
+    recruitment = "list",
+    R_error = "list"
   ),
   prototype = list(
     fished = FALSE
