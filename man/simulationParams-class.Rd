@@ -9,7 +9,7 @@ A simulationParams object.
 }
 \description{
 Species-specific parameter values are held in two dataframes.  Global values
-have their own slots.  This class is used to read input data from two external
+have their own slots.  This class is used to read input data from external
 files, and is later used to initialize Species objects with species-specific
 parameter values.
 }
@@ -20,12 +20,20 @@ parameter values.
 
 \item{\code{nYears}}{numeric. Number of years for the simulation.}
 
-\item{\code{nSteps}}{numeric. Number of timesteps per year (may not be used by all species)}
+\item{\code{nSteps}}{numeric. Number of timesteps per year (may not be used by all
+species)}
 
-\item{\code{scenario}}{character. A name for the scenario, which must match a column name in input_params.csv.}
+\item{\code{scenario}}{character. A name for the scenario, which must match a column
+name in input_params.csv.}
 
-\item{\code{params}}{A dataframe that holds parameter values for everything except diet preferences.}
+\item{\code{params}}{A dataframe that holds parameter values for everything except
+diet preferences.}
 
 \item{\code{diet_prefs}}{A dataframe that holds diet preferences for predators.}
+
+\item{\code{envir_periods}}{A dataframe that holds a set of environmental driver
+period lengths for each prey species}
+
+\item{\code{anchovy_residuals.}}{A set of observed stock-recruit residuals for anchovies.}
 }}
 

@@ -13,7 +13,7 @@ Inherits from the Predator class.
 \examples{
 pel<-new("Pelican")
 slotNames(pel) #see list of slots
-pel@Zv[,1:10] #show total mortality by age (Zv) for timesteps 1 to 10
+pel@Zmat[,1:10] #show total mortality by age (Zmat) for timesteps 1 to 10
 }
 \seealso{
 parent classes \linkS4class{Predator} and \linkS4class{Species} (top-level).

@@ -39,9 +39,9 @@ The Predator method calculates recruits for Predators.
 \itemize{
 \item \code{species = Prey,preylist = ANY}: Prey method.
 
-\item \code{species = Other_forage,preylist = ANY}: Prey method.
+\item \code{species = Other_forage,preylist = ANY}: Other_forage method.
 
-\item \code{species = Predator,preylist = list}: Prey method.
+\item \code{species = Predator,preylist = list}: Predator method.
 }}
 \seealso{
 Other recruitment: \code{\link{calc_B1P}},
@@ -50,7 +50,8 @@ Other recruitment: \code{\link{calc_B1P}},
   \code{\link{calc_Dy}}, \code{\link{calc_R_error}},
   \code{\link{calc_Ricker}},
   \code{\link{calc_availability}},
-  \code{\link{calc_other_R}},
+  \code{\link{calc_other_R}}, \code{\link{calc_phi}},
+  \code{\link{calc_predRecruits_Punt}},
   \code{\link{calc_predatorRecruits}},
   \code{\link{calc_preyRecruits}}, \code{\link{calc_p}}
 }

@@ -27,8 +27,9 @@ Plot a fitted function (observed vs. expected)
 }
 \seealso{
 Other results: \code{\link{calc_predicted}},
-  \code{\link{compile_results}}, \code{\link{makeplot}},
-  \code{\link{plot_every_nth}},
+  \code{\link{compile_results}},
+  \code{\link{get_every_nth}}, \code{\link{makeplot}},
+  \code{\link{plot_fitted_multipanel}},
   \code{\link{plot_function_only}},
   \code{\link{plot_summed_by_year}}
 }

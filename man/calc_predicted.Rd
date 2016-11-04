@@ -4,12 +4,14 @@
 \alias{calc_predicted}
 \title{Calculate predicted values}
 \usage{
-calc_predicted(species, predicted)
+calc_predicted(species, predicted, preyname)
 }
 \arguments{
 \item{species}{A species object (whatever is being plotted)}
 
 \item{predicted}{Character; the name of a predicted series}
+
+\item{preyname}{Character; the name of a prey species (only used for availabililty)}
 }
 \value{
 A data frame of predicted data (x and y; 100 rows)
@@ -20,7 +22,8 @@ for overlay in plots.
 }
 \seealso{
 Other results: \code{\link{compile_results}},
-  \code{\link{makeplot}}, \code{\link{plot_every_nth}},
+  \code{\link{get_every_nth}}, \code{\link{makeplot}},
+  \code{\link{plot_fitted_multipanel}},
   \code{\link{plot_fitted}},
   \code{\link{plot_function_only}},
   \code{\link{plot_summed_by_year}}

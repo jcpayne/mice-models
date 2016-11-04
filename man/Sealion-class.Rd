@@ -13,7 +13,7 @@ Inherits from Predator class.
 \examples{
 lion<-new("Sealion")
 slotNames(lion) #see list of slots
-lion@Zv[,1:10] #show total mortality by age (Zv) for timesteps 1 to 10
+lion@Zmat[,1:10] #show total mortality by age (Zmat) for timesteps 1 to 10
 }
 \seealso{
 parent classes \linkS4class{Predator} and \linkS4class{Species} (top-level).

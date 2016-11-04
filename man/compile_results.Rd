@@ -2,9 +2,9 @@
 % Please edit documentation in R/MICE_results.R
 \name{compile_results}
 \alias{compile_results}
-\title{Compile results and generate graphs.}
+\title{Compile results and generate graphs for one species.}
 \usage{
-compile_results(species, plot_master, nYears, nSteps)
+compile_results(species, plot_master, nYears, nSteps, preynames)
 }
 \arguments{
 \item{species}{A Species object}
@@ -19,15 +19,19 @@ compile_results(species, plot_master, nYears, nSteps)
 A list with the values of certain vectors assembled into a data frame, and a list of plots.
 }
 \description{
-Creates graphs of objects in Species slots, taking instructions from the
-plotlist.csv file.  Note that since a dataframe cannot be a ragged array, the
-number of rows in the data frame returned by the function is either nYears or
-tTimes, but certain items (catch, recruits) are plotted by year, even for
-species that are tracked by timestep.
+Creates graphs by taking X and Y series from slots in a Species object, and
+combines some of those data into a data frame that is returned with the
+plots. Reads instructions from the plotlist.csv file to decide which plots
+and series to produce (there are different sets of plots for prey and
+predators).  Note that since a dataframe cannot be a ragged array, the number
+of rows in the data frame that is returned by the function is either nYears or
+nTimes, but certain items (catch, recruits) are *plotted* by year, even when
+the species is tracked by timestep.
 }
 \seealso{
 Other results: \code{\link{calc_predicted}},
-  \code{\link{makeplot}}, \code{\link{plot_every_nth}},
+  \code{\link{get_every_nth}}, \code{\link{makeplot}},
+  \code{\link{plot_fitted_multipanel}},
   \code{\link{plot_fitted}},
   \code{\link{plot_function_only}},
   \code{\link{plot_summed_by_year}}

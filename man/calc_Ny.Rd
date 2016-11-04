@@ -17,8 +17,9 @@ A modified Species object; see Description.
 \description{
 Calculates numbers at age in year y, Nmat[,y], from Nmat[,y-1]. Sets the
 following values in the Species object: Nmat[,y]; the previous year's total
-mortality rate (Zv[y-1], log scale); the current year's fishing mortality
-rate (Fv[y], log scale, fished species only) and the current year age 1+ biomass, B1P[y]
+mortality rate (log scale) by age (Zmat[,y-1]); the current year's
+fishing mortality rate (Fv[y], log scale, a scalar, fished species only) and
+the current year age 1+ biomass, B1P[y]
 (prey species only).
 }
 \seealso{

@@ -4,7 +4,7 @@
 \alias{makeplot}
 \title{Plot a time series (a utility function)}
 \usage{
-makeplot(pdata, xname, yname, speciesname, ptitle, y_range)
+makeplot(pdata, xname, yname, speciesname, ptitle, y_range, series_type)
 }
 \arguments{
 \item{xname}{A display name for the X-axis}
@@ -28,7 +28,9 @@ Plot a time series (a utility function)
 \seealso{
 Other results: \code{\link{calc_predicted}},
   \code{\link{compile_results}},
-  \code{\link{plot_every_nth}}, \code{\link{plot_fitted}},
+  \code{\link{get_every_nth}},
+  \code{\link{plot_fitted_multipanel}},
+  \code{\link{plot_fitted}},
   \code{\link{plot_function_only}},
   \code{\link{plot_summed_by_year}}
 }

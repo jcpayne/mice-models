@@ -2,24 +2,34 @@
 % Please edit documentation in R/MICE_functions.R
 \name{calc_catch}
 \alias{calc_catch}
-\title{Calculate catch (tons) for a timestep or year}
+\title{Calculate catch (biomass units)}
 \usage{
-calc_catch(Species, t)
+calc_catch(Nv, wv, Mv, Sv, Ft)
 }
 \arguments{
+\item{Nv}{Vector of numbers at age for a particular time t}
+
+\item{wv}{Vector of weight at age}
+
+\item{Mv}{Vector of natural mortality rate at age}
+
+\item{Sv}{Vector of fishing gear selectivity at age}
+
+\item{Ft}{Instantaneous fishing mortality rate (log scale); a scalar.}
+
 \item{Species}{A Species object}
 
-\item{t}{time period (may be year or global timestep)}
+\item{t}{time period (year or timestep)}
 }
 \value{
-A Species object with catch set if fished=TRUE, or unset if fished=FALSE
+Catch in biomass units.
 }
 \description{
-Calculate catch (tons) for a timestep or year
+A utility function for calculating catch at time t.  Uses the Baranov equation,
+with fishing selectivity by age.
 }
 \seealso{
-Other fishing: \code{\link{calc_F_t}},
-  \code{\link{calc_F_y}}
+Other fishing: \code{\link{calc_Ft}}, \code{\link{calc_Fy}}
 }
 \keyword{internal}
 

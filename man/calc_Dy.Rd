@@ -4,12 +4,12 @@
 \alias{calc_Dy}
 \title{Calculate Dy.}
 \usage{
-calc_Dy(predator, Bprey, preylist)
+calc_Dy(predator, B0list, preylist)
 }
 \arguments{
 \item{predator}{A Predator object.}
 
-\item{Bprey}{A vector of available prey biomass for each species.}
+\item{B0list}{A named list of available prey biomass for each species.}
 
 \item{preylist}{A list of Prey objects.}
 }
@@ -28,7 +28,8 @@ Other recruitment: \code{\link{calc_B1P}},
   \code{\link{calc_Bprey_agepreferred}},
   \code{\link{calc_R_error}}, \code{\link{calc_Ricker}},
   \code{\link{calc_availability}},
-  \code{\link{calc_other_R}},
+  \code{\link{calc_other_R}}, \code{\link{calc_phi}},
+  \code{\link{calc_predRecruits_Punt}},
   \code{\link{calc_predatorRecruits}},
   \code{\link{calc_preyRecruits}}, \code{\link{calc_p}},
   \code{\link{calc_recruits}}

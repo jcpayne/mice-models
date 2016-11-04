@@ -1,16 +1,25 @@
-obj_type,slot.x,slot.y,xlab,ylab,title,plottype,predicted,y_range,plotname,in_dataframe
-Prey,,B1P,,Age 1+ biomass (tons),age 1+ biomass,timeseries,,include_0,B1P,1
-Prey,,B_sp,,Spawning biomass (tons),spawning biomass,step1only,,include_0,B_sp,1
-Prey,,R,,R,recruitment,step1only,,include_0,R,1
-Prey,,lnSR_err,,Log recruitment error,log recruitment error,timeseries,,auto,lnSR_err,1
-Prey,,Fv,,Log mortality rate (Fv),fishing mortality (log),step1only,,include_0,Fv,1
-Prey,,Cv,,Catch (tons),catch,summed_by_year,,include_0,Cv,1
-Prey,B_sp,R,Spawning biomass (tons),Recruits,recruits per spawner,xy,recruitment,include_0,BspxR,0
-Prey,,B1P,Actual biomass,Available biomass,availability,function_only,availability,include_0,availability,0
-Predator,,Nm,,Nm,number mature,timeseries,,include_0,Nm,1
-Predator,,R,,R,recruitment,timeseries,,include_0,R,1
-Predator,,lnSR_err,,lnSR_err,log recruitment error,timeseries,,auto,lnSR_err,1
-Predator,,Fv,,Fv,fishing mortality (log),step1only,,include_0,Fv,1
-Predator,,Cv,,Catch (tons),catch,summed_by_year,,include_0,Cv,1
-Predator,Nm,R,Number mature (Nm),Recruits,recruits per adult,xy,recruitment,include_0,NmxR,0
-Predator,Dy,BHp,Total prey biomass (Dy),Bev-Holt p (BHp),prey effect on reproduction,xy,prey_effect,include_0,DyxBHp,0
+obj_type,slot.x,slot.y,xlab,ylab,title,plottype,predicted,xtype,y_range,series_type,plotname,in_dataframe
+Prey,,B1P,,B 1+,age 1+ biomass by year,timeseries,,step1only,include_0,line,B1P,1
+Prey,,B_sp,,Spawning biomass (tons),spawning biomass by year,timeseries,,step1only,include_0,line,B_sp,1
+Prey,,R,,R,recruitment by year,timeseries,,step1only,include_0,point,R,1
+Prey,,lnSR_err,,Log recruitment error,log recruitment error,timeseries,,step1only,auto,line,lnSR_err,1
+Prey,,Fv,,Log mortality rate (Fv),fishing mortality (log),timeseries,,step1only,include_0,line,Fv,1
+Prey,,Cy,,Catch (tons),catch,timeseries,,auto,include_0,line,Cy,1
+Prey,B_sp,R,Spawning biomass (tons),Recruits,recruits vs spawning biomass,xy,recruitment,step1only,include_0,auto,BspxR,0
+Prey,,G,,Environmental driver G,environmental driver (G),timeseries,,step1only,auto,line,G,0
+Prey,,B1PperB0,,B1+ / B0,biomass age-1+ /unfished biomass,timeseries,,step1only,include_0,line,B1PperB0,1
+Predator,,Nm,,Nm,number mature,timeseries,,step1only,include_0,line,Nm,1
+Predator,,NperK,,Nmature / K,number relative to unfished prey condition,timeseries,,step1only,include_0,line,NperK,1
+Predator,,R,,Number of recruits,recruitment by year,timeseries,,step1only,include_0,line,R,1
+Predator,,RperS,,Recruits per adult,recruits per adult,timeseries,,step1only,include_0,line,RperS,1
+Predator,Nm,R,Number mature (Nm),Recruits,recruits vs adults,xy,recruitment,step1only,include_0,auto,NmxR,0
+Predator,,lnSR_err,,lnSR_err,log recruitment error,timeseries,,step1only,auto,line,lnSR_err,1
+Predator,,Fv,,Fv,fishing mortality (log),timeseries,,step1only,include_0,line,Fv,1
+Predator,,Cy,,Catch (tons),catch,timeseries,,auto,include_0,line,Cy,1
+Predator,Dy,BHp,Total prey biomass (Dy),Bev-Holt p (BHp),prey effect on reproduction,xy,prey_effect,step1only,include_0,auto,DyxBHp,0
+Predator,,prey_availability,Age-preferred biomass,Available biomass,availability,availability,availability,step1only,include_0,auto,availability,0
+Predator,Dy,phi,Scaled prey biomass (Dy),Impact of prey on predator reproduction (phi),Dy (prey biomass) vs phi (prey imapact) Punt method,xy,,step1only,include_0,auto,Dyxphi,0
+Predator,,R_Punt,,Reproduction (Punt method),recruits by year (Punt method),timeseries,,step1only,include_0,line,R_punt,1
+Predator,,RperS_Punt,,Recruits per adult,recruits per adult (Punt method),timeseries,,step1only,include_0,line,RperS_Punt,1
+Predator,Nm,R_Punt,Number mature (Nm),Predicted recruits (with no effect of prey),recruits vs adults (Punt method),xy,R_Punt,step1only,include_0,auto,RxNm_Punt,0
+Predator,Nm,R_Punt,Number mature (Nm),Recruits,Compare Punt and Hilborn R/S methods,compare2xy,R_Punt,step1only,include_0,auto,comp2R,0

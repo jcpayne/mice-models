@@ -4,10 +4,12 @@
 \alias{calc_Nt}
 \title{Calculate Numbers at age at time t, for species tracked by timestep.}
 \usage{
-calc_Nt(Species, ts, t, L)
+calc_Nt(Species, y, ts, t, L)
 }
 \arguments{
 \item{Species}{A Species object.}
+
+\item{y}{Simulation year}
 
 \item{ts}{Global timestep (ts = t * y)}
 
@@ -23,11 +25,12 @@ Calculates numbers at age at time t, Nmat[,t], from Nmat[,t-1] and sets it in th
 Species object.  Reproduction happens in timestep 1 each year, and during other
 timesteps, only mortality is applied.  The function sets the following values
 in the Species object: Nmat[,t]; the previous timestep's total mortality rate
-(Zv[t-1], log scale); the current fishing mortality rate (Fv[t], log
-scale, fished species only); and the current age 1+ biomass, B1P[t] (prey species
-only).
+(Zmat[,t-1], log scale); the current fishing mortality rate (Fv[t], log
+scale) and catch; fished species only); and the current age 1+ biomass, B1P[t]
+(prey species only).
 }
 \seealso{
 Other Basic_dynamics: \code{\link{calc_Ny}}
 }
+\keyword{internal}
 

@@ -14,9 +14,15 @@ prey, but not predators.
 \section{Slots}{
 
 \describe{
-\item{\code{availability}}{list. Parameters of the spatial availability function.}
+\item{\code{B_sp}}{numeric. Spawning biomass by time; a vector.}
 
-\item{\code{observed_SR_err}}{numeric. Observed stock-recruit residuals (ln scale), to resample from.}
+\item{\code{B1P}}{numeric. Age 1+ biomass by time; a vector.}
+
+\item{\code{B1PperB0}}{numeric.  Age 1+ biomass relative to unfished age-1+ biomass; a vector (time).}
+
+\item{\code{B0}}{numeric. Average age-1+ biomass in unfished condition.}
+
+\item{\code{G}}{numeric. Environmental driver for reproduction.}
 }}
 \seealso{
 parent class \linkS4class{Species}

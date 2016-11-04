@@ -26,9 +26,9 @@ it easier to swap models later.
 
 \item{\code{P}}{numeric. Age plus-group; a scalar.}
 
-\item{\code{am}}{numeric. Age at maturity; a vector.}
+\item{\code{am}}{numeric. Age at maturity; a scalar.}
 
-\item{\code{mv}}{numeric. Proportion mature at age; a vector.}
+\item{\code{maturev}}{numeric. Proportion mature at age; a vector.}
 
 \item{\code{Ninit}}{numeric. Numbers at age in year 1 (or timestep 1 of year 1); a vector.}
 
@@ -36,7 +36,7 @@ it easier to swap models later.
 
 \item{\code{wv}}{numeric. Weight at age; a vector.}
 
-\item{\code{M}}{numeric. Natural mortality rate (log scale); a scalar.}
+\item{\code{Mv}}{numeric. Natural mortality rate (log scale) by age; a vector.}
 
 \item{\code{fished}}{logical.  Is the species fished?}
 
@@ -50,9 +50,11 @@ it easier to swap models later.
 
 \item{\code{gv}}{numeric. Proportion of F that occurs per timestep; a vector.}
 
-\item{\code{Cv}}{numeric. Catch by time; a vector.}
+\item{\code{Cy}}{numeric. Catch per year; a vector.}
 
-\item{\code{Zv}}{matrix. Total mortality rate (log scale) by time: a vector.}
+\item{\code{Ct}}{numeric. Catch per timestep; a vector.}
+
+\item{\code{Zmat}}{matrix. Total mortality rate (log scale) by time: a vector.}
 
 \item{\code{R_baseyear}}{numeric. Recruitment in a year 1, if supplied; a scalar.}
 
@@ -60,8 +62,6 @@ it easier to swap models later.
 
 \item{\code{lnSR_err}}{numeric. Stock-recruitment errors (ln scale) by time; a vector.}
 
-\item{\code{recruitment}}{list. Parameters used in recruitment model (may vary by species)}
-
-\item{\code{B1P}}{numeric. Age 1+ biomass by time; a vector.}
+\item{\code{recruitment}}{list. Parameters used in recruitment model (may vary by species).}
 }}
 

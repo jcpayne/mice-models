@@ -13,7 +13,7 @@ Inherits from Prey class.  By default, this species is fished.
 \examples{
 sar<-new("Sardine")
 slotNames(sar) #see list of slots
-sar@Zv[,1:10] #show total mortality by age (Zv) for timesteps 1 to 10
+sar@G #Get values of environmental driver, G.
 }
 \seealso{
 parent classes \linkS4class{Prey} and \linkS4class{Species} (top-level).

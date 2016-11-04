@@ -19,17 +19,36 @@ Inherits from Species and has slots for values that are common to predators but 
 
 \item{\code{omegas}}{list. Parameters that scale available prey biomass per species so they sum (roughly) to 1}
 
+\item{\code{prey_availability}}{list. Parameters used in model of spatial availability
+(one set per prey species in list elements named for the prey species.  May also be used to store data for graphing availability.)}
+
 \item{\code{prey_effect}}{list. Parameters for the model that determines how much of an impact prey biomass has on predator recruitment}
 
+\item{\code{D0}}{numeric. The available, scaled total prey biomass in unfished condition.  A scalar.}
+
 \item{\code{Dy}}{numeric. Available, scaled total prey biomass; a vector (time).}
+
+\item{\code{Fmax}}{numeric.  Maximum fecundity (population lambda, from data).}
+
+\item{\code{bigPhi}}{numeric.  Scaling parameter for reproduction.}
+
+\item{\code{phi}}{numeric.  Sensitivity of predator reproduction to prey biomass}
 
 \item{\code{BHp}}{numeric. Beverton-Holt p parameter, which is affected by prey; a vector (time).}
 
 \item{\code{Mo}}{numeric. Maximum number of offspring; a scalar.}
 
-\item{\code{K}}{numeric. Carrying capacity; a scalar.}
+\item{\code{Nm}}{numeric. Number of mature predators; a vector (time).}
 
-\item{\code{Nm}}{numeric. Number of mature animals; a vector.}
+\item{\code{N1P}}{numeric. Number of age-1+ predators; a vector (time).}
+
+\item{\code{K1P}}{numeric.  Number of age-1+ predators when prey are unfished}
+
+\item{\code{NperK}}{numeric. Number of age-1+ predators per age-1+ predators when prey are unfished.}
+
+\item{\code{RperS}}{numeric. Recruits per spawner; a vector (time).}
+
+\item{\code{RperS_Punt}}{numeric. Recruits per spawner (Punt method); a vector (time).}
 }}
 \seealso{
 parent class \linkS4class{Species}

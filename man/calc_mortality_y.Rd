@@ -4,10 +4,10 @@
 \alias{calc_mortality_y}
 \title{Calculate total mortality rate}
 \usage{
-calc_mortality_y(M, Ft, Sv)
+calc_mortality_y(Mv, Ft, Sv)
 }
 \arguments{
-\item{M}{Natural mortality rate (scalar).}
+\item{Mv}{Natural mortality rate (log scale) by age. Vector.}
 
 \item{Ft}{Total fishing mortality rate (scalar).}
 

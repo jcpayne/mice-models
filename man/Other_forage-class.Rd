@@ -15,7 +15,7 @@ it has a fixed recruitment (R_base).
 other<-new("Other_forage")
 #' oth<-new("Other_forage")
 slotNames(oth) #see list of slots
-oth@Zv[,1:10] #show total mortality by age (Zv) for timesteps 1 to 10
+oth@Zmat[,1:10] #show total mortality by age (Zmat) for timesteps 1 to 10
 }
 \seealso{
 parent classes \linkS4class{Prey} and \linkS4class{Species} (top-level).

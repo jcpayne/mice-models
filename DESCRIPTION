@@ -25,5 +25,6 @@ Depends:
 RoxygenNote: 5.0.1
 Collate:
     'MICE_object_model.R'
+    'MICE_initialization.R'
     'MICE_functions.R'
     'MICE_results.R'

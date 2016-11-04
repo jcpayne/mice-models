@@ -4,14 +4,14 @@
 \alias{calc_B_sp}
 \title{Calculate spawning biomass (tons)}
 \usage{
-calc_B_sp(wv, Nv, mv)
+calc_B_sp(wv, Nv, maturev)
 }
 \arguments{
 \item{wv}{Weight at age (in kg)}
 
 \item{Nv}{Numbers at age}
 
-\item{mv}{maturity at age}
+\item{maturev}{maturity at age}
 }
 \value{
 A scalar: biomass in tons
@@ -26,7 +26,8 @@ Other recruitment: \code{\link{calc_B1P}},
   \code{\link{calc_Dy}}, \code{\link{calc_R_error}},
   \code{\link{calc_Ricker}},
   \code{\link{calc_availability}},
-  \code{\link{calc_other_R}},
+  \code{\link{calc_other_R}}, \code{\link{calc_phi}},
+  \code{\link{calc_predRecruits_Punt}},
   \code{\link{calc_predatorRecruits}},
   \code{\link{calc_preyRecruits}}, \code{\link{calc_p}},
   \code{\link{calc_recruits}}

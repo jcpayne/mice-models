@@ -10,10 +10,17 @@ An object of the Anchovy class.
 \description{
 Inherits from Prey.
 }
+\section{Slots}{
+
+\describe{
+\item{\code{p_fail}}{The probability of recruitment failure}
+
+\item{\code{R_residuals}}{A set of observed recruitment residuals.}
+}}
 \examples{
 anch<-new("Anchovy")
 slotNames(anch) #see list of slots
-anch@Zv[,1:10] #show total mortality by age (Zv) for timesteps 1 to 10
+anch@Zmat[,1:10] #show total mortality by age (Zmat) for timesteps 1 to 10
 }
 \seealso{
 parent classes \linkS4class{Prey} and \linkS4class{Species} (top-level).

@@ -27,6 +27,8 @@ Other recruitment: \code{\link{calc_B1P}},
   \code{\link{calc_Bprey_agepreferred}},
   \code{\link{calc_Dy}}, \code{\link{calc_R_error}},
   \code{\link{calc_Ricker}}, \code{\link{calc_other_R}},
+  \code{\link{calc_phi}},
+  \code{\link{calc_predRecruits_Punt}},
   \code{\link{calc_predatorRecruits}},
   \code{\link{calc_preyRecruits}}, \code{\link{calc_p}},
   \code{\link{calc_recruits}}

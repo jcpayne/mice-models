@@ -4,10 +4,10 @@
 \alias{calc_mortality_t}
 \title{Calculate total mortality rate}
 \usage{
-calc_mortality_t(M, L, Ft, Sv)
+calc_mortality_t(Mv, L, Ft, Sv)
 }
 \arguments{
-\item{M}{Natural mortality rate (scalar).}
+\item{Mv}{Natural mortality rate (log scale) by age. Vector.}
 
 \item{L}{Number of timesteps per year (scalar).}
 
